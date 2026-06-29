@@ -12,6 +12,12 @@
 
 它适合小工具、原型、个人项目、轻量应用、脚本、Dashboard、实验性产品等场景。它不追求完整工程治理，而是帮助项目快速、清楚、可验证地开工。
 
+## 灵感来源
+
+这个 Skill 的灵感来自 B 站 UP 主“隔壁的程序员老王”的视频：[《VibeCoding就该这么做！》](https://www.bilibili.com/video/BV1YP5W6ZEP9/)。
+
+它在这个思路上进一步结合了 `superpowers` 的工程执行纪律，把“先形成需求、设计、任务和启动 Prompt，再让 Agent 执行”的流程整理成一个可复用的 Codex Skill。
+
 ## 和 superpower 的关系
 
 `superpower` 更像一组通用工程执行纪律，强调 Agent 在编码过程中如何避免常见错误：
@@ -136,13 +142,10 @@ Skill 版本可以被 Codex 自动触发或显式调用，并且会根据当前�
 
 ## 安装
 
-如果这个仓库的根目录就是 Skill 目录，可以用 repo-root 方式安装：
+最简单的方式是直接告诉 AI：
 
-```bash
-python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo <owner>/<repo> \
-  --path . \
-  --name vibecoding-workflow
+```text
+安装这个 skill：https://github.com/jedidevlab/vibecoding-workflow/blob/main/SKILL.md
 ```
 
 安装后，重启 Codex 或开启新的 Codex 会话，让 Skill 被重新发现。
