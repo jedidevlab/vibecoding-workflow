@@ -16,11 +16,11 @@
 
 这个 Skill 的灵感来自 B 站 UP 主“隔壁的程序员老王”的视频：[《VibeCoding就该这么做！》](https://www.bilibili.com/video/BV1YP5W6ZEP9/)。
 
-它在这个思路上进一步结合了 `superpowers` 的工程执行纪律，把“先形成需求、设计、任务和启动 Prompt，再让 Agent 执行”的流程整理成一个可复用的 Codex Skill。
+它在这个思路上进一步结合了 `Superpowers` 的工程执行纪律，把“先形成需求、设计、任务和启动 Prompt，再让 Agent 执行”的流程整理成一个可复用的 Codex Skill。
 
-## 和 superpower 的关系
+## 和 Superpowers 的关系
 
-`superpower` 更像一组通用工程执行纪律，强调 Agent 在编码过程中如何避免常见错误：
+`Superpowers` 更像一组通用工程执行纪律，强调 Agent 在编码过程中如何避免常见错误：
 
 - 先澄清再实现
 - 小步推进
@@ -29,7 +29,7 @@
 - 完成前验证
 - 避免无关重构
 
-`vibecoding-workflow` 吸收了这些原则，但它不是 superpower 的替代品。
+`vibecoding-workflow` 吸收了这些原则，但它不是 Superpowers 的替代品。
 
 它更关注“开工前如何把想法变成可执行项目上下文”：
 
@@ -43,7 +43,7 @@
 简单说：
 
 ```text
-superpower 关注：Agent 怎么把事情做稳。
+Superpowers 关注：Agent 怎么把事情做稳。
 vibecoding-workflow 关注：项目怎么从想法进入可执行状态。
 ```
 
