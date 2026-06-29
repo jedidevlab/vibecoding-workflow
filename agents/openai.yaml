@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vibecoding Workflow"
+  short_description: "Lightweight workflow for starting small projects"
+  default_prompt: "Use $vibecoding-workflow to turn this small project idea into requirements, design, tasks, and an agent launch prompt."
