@@ -18,6 +18,7 @@ If the request is already a concrete code change with clear requirements, do the
 ## Core Principles
 
 - Clarify before specifying. Do not guess user intent.
+- Brainstorm when the project shape, technical direction, architecture, feature set, or implementation approach is unclear.
 - Keep the workflow lightweight. Prefer a short useful document over a complete but slow one.
 - Stay project-specific. Do not add generic methodology unless it affects the current project.
 - Make every task executable. Each task needs scope, expected output, and verification.
@@ -48,7 +49,23 @@ Ask the minimum useful questions needed to define:
 
 Prefer one compact batch of questions for a new project. For very small projects, make reasonable assumptions and list them instead of blocking.
 
-### 2. Specify
+### 2. Brainstorm
+
+Use this stage when the user does not know how the project should be designed, implemented, scoped, or decomposed. Skip it when the direction is already clear enough to specify.
+
+Keep brainstorming lightweight:
+
+- restate the goal and important constraints
+- propose 2-3 viable approaches
+- compare the trade-offs
+- recommend one default direction
+- identify what the recommendation changes in scope, architecture, user experience, or validation
+
+If the choice would materially affect the product shape, architecture, data model, timeline, or acceptance criteria, ask the user to choose or approve the recommendation before writing `doc/proposal.md`.
+
+If the differences are minor, record the recommended direction and continue.
+
+### 3. Specify
 
 Create or update `doc/proposal.md`.
 
@@ -57,6 +74,7 @@ Include:
 - project summary
 - current project background
 - existing materials
+- selected direction from brainstorming, if brainstorming was used
 - users and use cases
 - functional requirements
 - non-functional requirements
@@ -66,7 +84,7 @@ Include:
 
 Keep the proposal practical. Avoid market analysis, long personas, or product strategy unless the user asked for them.
 
-### 3. Design
+### 4. Design
 
 Create or update `doc/detailed-design.md`.
 
@@ -86,7 +104,7 @@ Design for independent work units. Modules should be small enough that an agent 
 
 Do not introduce capabilities absent from `doc/proposal.md`.
 
-### 4. Plan
+### 5. Plan
 
 Create or update:
 
@@ -108,7 +126,7 @@ Keep tasks small. Split any task that mixes unrelated behavior, requires too man
 
 `progress.md` should show module-level status and the recommended execution order.
 
-### 5. Launch
+### 6. Launch
 
 Create or update `doc/prompt.md`.
 
@@ -155,6 +173,8 @@ Use these structures as defaults. Adjust section names only when the project alr
 
 ## Existing Materials
 
+## Selected Direction
+
 ## Users and Use Cases
 
 ## Functional Requirements
@@ -174,6 +194,8 @@ Use these structures as defaults. Adjust section names only when the project alr
 # Detailed Design
 
 ## System Overview
+
+## Approach Rationale
 
 ## Existing Code or Project Structure
 
@@ -266,6 +288,7 @@ When generating the workflow artifacts:
 Before finishing, verify that:
 
 - `proposal.md` has clear acceptance criteria.
+- `proposal.md` records the selected direction when brainstorming was needed.
 - `detailed-design.md` maps requirements to modules or flows.
 - every task has a verification method.
 - `progress.md` gives an execution order.
