@@ -1,6 +1,6 @@
 # vibecoding-workflow
 
-`vibecoding-workflow` 是一个用于启动小型软件项目的 Codex Skill。
+`vibecoding-workflow` 是一个用于启动小型软件项目的 Skill。
 
 它的目标是把一个粗略想法快速转成可执行的开发上下文，包括：
 
@@ -33,7 +33,7 @@ Clarify → Brainstorm → Specify → Design → Plan → Launch
 
 这个 Skill 的灵感来自 B 站 UP 主“隔壁的程序员老王”的视频：[《VibeCoding就该这么做！》](https://www.bilibili.com/video/BV1YP5W6ZEP9/)。
 
-它在这个思路上进一步结合了 `Superpowers` 的工程执行纪律，把“先形成需求、设计、任务和启动 Prompt，再让 Agent 执行”的流程整理成一个可复用的 Codex Skill。
+它在这个思路上进一步结合了 `Superpowers` 的工程执行纪律，把“先形成需求、设计、任务和启动 Prompt，再让 Agent 执行”的流程整理成一个可复用的 Skill。
 
 ## 和 Superpowers 的关系
 
@@ -122,7 +122,7 @@ vibecoding-workflow 关注：小项目如何快速形成清楚的开工上下文
 
 一次性 Prompt 模板需要用户手动复制、替换、调整，也很难根据不同项目状态稳定变形。
 
-Skill 版本可以被 Codex 自动触发或显式调用，并且会根据当前项目上下文决定：
+Skill 版本可以被 AI 自动触发或显式调用，并且会根据当前项目上下文决定：
 
 - 该问哪些问题
 - 是否需要先 Brainstorm 几个方案
@@ -166,7 +166,7 @@ Skill 版本可以被 Codex 自动触发或显式调用，并且会根据当前�
 安装这个 skill：https://github.com/jedidevlab/vibecoding-workflow/blob/main/SKILL.md
 ```
 
-安装后，重启 Codex 或开启新的 Codex 会话，让 Skill 被重新发现。
+安装后，重启你的 AI 编程工具或开启新的会话，让 Skill 被重新发现。
 
 ## 使用
 
@@ -194,6 +194,6 @@ vibecoding-workflow/
 
 其中：
 
-- `SKILL.md` 是 Skill 的核心说明，Codex 会读取它来执行 workflow。
-- `agents/openai.yaml` 是 Codex UI 元数据。
+- `SKILL.md` 是 Skill 的核心说明，AI 会读取它来执行 workflow。
+- `agents/openai.yaml` 是 UI 元数据。
 - `README.md` 面向 GitHub 读者，说明定位、安装和使用方式。
