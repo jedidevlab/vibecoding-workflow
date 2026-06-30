@@ -12,6 +12,23 @@
 
 它适合小工具、原型、个人项目、轻量应用、脚本、Dashboard、实验性产品等场景。它不追求完整工程治理，而是帮助项目快速、清楚、可验证地开工。
 
+## 工作流
+
+`vibecoding-workflow` 会按轻量流程推进：
+
+```text
+Clarify → Brainstorm → Specify → Design → Plan → Launch
+```
+
+- `Clarify`：确认项目目标、用户、已有资料、技术约束、边界和验收标准。
+- `Brainstorm`：当用户还不知道怎么设计、怎么开发、怎么拆功能或怎么选技术方向时，提出 2-3 个方案，比较取舍，并推荐一个默认方向。
+- `Specify`：生成 `doc/proposal.md`，把项目目标、需求、非目标和验收标准写清楚。
+- `Design`：生成 `doc/detailed-design.md`，明确模块、接口、数据结构、关键流程和验证策略。
+- `Plan`：生成 `doc/tasks/*.md` 和 `doc/tasks/progress.md`，把设计拆成可执行、可验证的小任务。
+- `Launch`：生成 `doc/prompt.md`，作为主 Agent 后续执行项目的启动 Prompt。
+
+其中 `Brainstorm` 是条件触发的：如果项目方向已经清楚，就跳过；如果用户需要设计或实现思路，就先帮用户选方向，再进入文档和任务拆分。
+
 ## 灵感来源
 
 这个 Skill 的灵感来自 B 站 UP 主“隔壁的程序员老王”的视频：[《VibeCoding就该这么做！》](https://www.bilibili.com/video/BV1YP5W6ZEP9/)。
@@ -101,13 +118,14 @@ vibecoding-workflow 关注：小项目如何快速形成清楚的开工上下文
 
 没有复杂流程，也不要求用户先学一套规格系统。
 
-### 3. 比普通 Prompt 模板更可复用
+### 3. 比一次性 Prompt 更可复用
 
-普通 `vibecoding.md` 模板需要用户手动复制、替换、调整。
+一次性 Prompt 模板需要用户手动复制、替换、调整，也很难根据不同项目状态稳定变形。
 
 Skill 版本可以被 Codex 自动触发或显式调用，并且会根据当前项目上下文决定：
 
 - 该问哪些问题
+- 是否需要先 Brainstorm 几个方案
 - 该生成哪些文档
 - 任务应该拆到什么粒度
 - 哪些验证方式适合当前技术栈
